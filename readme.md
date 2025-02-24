@@ -10,3 +10,7 @@ I want to use a framework like react and also want to make use of css template c
 
 
 ## To do:
+1. Choose a and apply a button
+2. Create a transition between welcome page and parralax page
+3. Remove scrolling functionality on welcome page
+4. Start with the other attributes on the on the page such as the about section.
