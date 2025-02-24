@@ -1,4 +1,4 @@
-### Eduvos Coding Club Website
+# Eduvos Coding Club Website
 
 ## Why this project?
 
