@@ -100,4 +100,18 @@ function enterWebsite() {
     }, 1000);
 }
 
+function returnHome () {
+    const homePage = document.querySelector('.homePage');
+    const aboutSection = document.getElementById('about');
+    const body = document.body;
+
+    homePage.classList.remove('fade-out-up');
+    body.classList.add('no-scroll');
+    homePage.classList.add('fade-in-down');
+    
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 1000);
+}
+
 
