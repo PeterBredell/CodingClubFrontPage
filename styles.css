@@ -29,7 +29,7 @@ body {
   padding: 0 15px;
 }
 
-.homePage.fade-out-up {
+.homePage.fade-out-up { /* Fade out animation for the home page  */
   animation: fadeOutUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
@@ -45,7 +45,7 @@ body {
   gap: 2rem;
 }
 
-.homeLogo {
+.homeLogo { /*  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,9 +53,9 @@ body {
   margin: 1rem 0 2rem;
 }
 
-.pulse-logo {
-  width: 180px;
-  height: 180px;
+.pulse-logo { /* Pulse of the Eduvos and Club Logo on the home page  */
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
