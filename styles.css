@@ -6,7 +6,7 @@
 }
 
 
-body {
+body { /*Body styles for the entire page */
   width: 100%;
   background: rgb(0, 0, 0);
   overflow-x: hidden;
