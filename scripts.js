@@ -116,6 +116,11 @@ function enterWebsite() {
     homePage.classList.add('fade-out-up');
     body.classList.remove('no-scroll');
 
+    // Make about section fully visible
+    aboutSection.style.display = 'block';
+    aboutSection.style.visibility = 'visible';
+    aboutSection.style.opacity = '1';
+
     setTimeout(() => {
         aboutSection.scrollIntoView({ behavior: 'smooth' });
     }, 1000);
@@ -133,22 +138,30 @@ function enterWebsite() {
 
 function returnHome() {
     const homePage = document.querySelector('.homePage');
+    const aboutSection = document.getElementById('about');
     const body = document.body;
 
-    // Remove any existing classes that might interfere
+    
+    // Remove previous animation classes
     homePage.classList.remove('fade-out-up');
     homePage.classList.add('fade-in-down');
     
-    // Disable scrolling
+    // Hide about section
+    aboutSection.style.opacity = '0';
+    aboutSection.style.display = 'none';
+    
+    // Disable scrolling temporarily
     body.classList.add('no-scroll');
     
-    // Scroll to top immediately
-    window.scrollTo(0, 0);
+    // Scroll to absolute top
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    });
 
     setTimeout(() => {
         homePage.classList.remove('fade-in-down');
-        // Make sure the home page is fully visible
-        homePage.style.display = 'flex';
+        // Don't modify visibility here
     }, 1000);
 }
 
