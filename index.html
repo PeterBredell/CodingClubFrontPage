@@ -6,40 +6,122 @@
     <title>Eduvos Coding Club</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Fonts from google to fit the theme of the website -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="no-scroll">
+    <div class="particle-container"></div>
     <section class="homePage">
-        <div class="home" >
+        <div class="home">
             <div class="homeLogo">
-                <img src="images/EduvosLogo.png" alt="club logo">
+                <div class="pulse-logo">
+                  <img src="images/EduvosLogo.png" alt="club logo" class="logo-image">
+                </div>
             </div>
-            <h1>
-                Welcome to Eduvos Coding Club!
+
+            <h1 class="animated-heading">
+                <span class="line">
+                    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                </span>
+                <span class="line">
+                    <span>t</span><span>o</span>
+                </span>
+                <span class="line">
+                    <span>E</span><span>d</span><span>u</span><span>v</span><span>o</span><span>s</span>
+                </span>
+                <span class="line">
+                    <span>C</span><span>o</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                </span>
+                <span class="line">
+                    <span>C</span><span>l</span><span>u</span><span>b</span><span>!</span>
+                </span>
             </h1>
+
             <div class="button">
-                <a href="#" class="enterOurWorld">Enter our world...</a> <!--Button here now acts as a place holder-->
+              <button class="glowing-btn" onclick="enterWebsite()">
+              <span class="glowing-txt">E<span class="faulty-letter">N</span>TER</span>
+              </button>
             </div>
         </div>
     </section>
-    
 
-    <h2>About the club</h2>
-    <p>
-        Eduvos Coding Club is a community dedicated to learning, teaching, and building coding skills in the tech industry. We encourage members to explore their interests, passions, and aspirations, and help them develop the skills and knowledge needed to succeed in the tech industry.
-    </p>
-    <h2>Club Representatives</h2>
-    
-    <h2>Join the club</h2>
+    <section id="about" class="about-section section">
+        <div class="text-container">
+            <div class="title-wrapper">
+                <h2 class="section-title">About the club</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <p class="about-text">
+                Welcome to the Eduvos Coding Club! We're a dynamic community of passionate coders dedicated to learning and growing together. Our club serves as a hub for students interested in software development, web technologies, and programming innovation.
+            </p>
+            
+            <div class="about-cards">
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Learn &amp; Grow</h3>
+                        <p class="card-hover__text">Weekly workshops and hands-on coding sessions focused on real-world applications</p>
+                        <div class="card-hover__link">
+                            <span>Explore</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </div>
+                    </div>
+                </div>
 
-    <h2>Our Projects</h2>
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Build Projects</h3>
+                        <p class="card-hover__text">Collaborative projects and exciting hackathon opportunities</p>
+                        <div class="card-hover__link">
+                            <span>Discover</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
 
-    <h2>What we are up to.</h2>
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Connect</h3>
+                        <p class="card-hover__text">Network with fellow coders and industry professionals</p>
+                        <div class="card-hover__link">
+                            <span>Join Us</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>A taste of what you can learn with us</h2>
-
-    <h2>Contact us</h2>
-
+            <div class="about-details">
+                <div class="detail-section">
+                    <h3>What We Offer</h3>
+                    <ul>
+                        <li>Hands-on coding workshops</li>
+                        <li>Project-based learning experiences</li>
+                        <li>Mentorship from experienced developers</li>
+                        <li>Hackathons and coding competitions</li>
+                        <li>Industry insights and career guidance</li>
+                    </ul>
+                </div>
+                <div class="detail-section">
+                    <h3>Our Focus Areas</h3>
+                    <ul>
+                        <li>Web Development (Frontend &amp; Backend)</li>
+                        <li>Mobile App Development</li>
+                        <li>Software Engineering Principles</li>
+                        <li>Database Management</li>
+                        <li>Cloud Computing &amp; DevOps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="scripts.js" defer></script>
 </body>
 </html>
