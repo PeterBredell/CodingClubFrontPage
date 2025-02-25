@@ -113,17 +113,24 @@ function enterWebsite() {
     const aboutSection = document.getElementById('about');
     const body = document.body;
 
+    // Setup initial state
+    aboutSection.style.visibility = 'visible';
+    aboutSection.style.display = 'block';
+    aboutSection.style.opacity = '0';
+    aboutSection.style.transform = 'translateY(30px)';
+    
+    // Trigger home page fade out
     homePage.classList.add('fade-out-up');
     body.classList.remove('no-scroll');
 
-    // Make about section fully visible
-    aboutSection.style.display = 'block';
-    aboutSection.style.visibility = 'visible';
-    aboutSection.style.opacity = '1';
-
+    // Slower, smoother transition for about section
     setTimeout(() => {
+        homePage.style.display = 'none';
+        aboutSection.style.transition = 'opacity 2s cubic-bezier(0.4, 0, 0.2, 1), transform 2s cubic-bezier(0.4, 0, 0.2, 1)';
+        aboutSection.style.opacity = '1';
+        aboutSection.style.transform = 'translateY(0)';
         aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }, 1000);
+    }, 800); // Increased delay before starting the fade-in
 }
 
 /**
@@ -140,14 +147,15 @@ function returnHome() {
     const homePage = document.querySelector('.homePage');
     const aboutSection = document.getElementById('about');
     const body = document.body;
-
+    
+    // Show home page before animation
+    homePage.style.display = 'flex';
     
     // Remove previous animation classes
     homePage.classList.remove('fade-out-up');
     homePage.classList.add('fade-in-down');
     
     // Hide about section
-    aboutSection.style.opacity = '0';
     aboutSection.style.display = 'none';
     
     // Disable scrolling temporarily
@@ -161,7 +169,6 @@ function returnHome() {
 
     setTimeout(() => {
         homePage.classList.remove('fade-in-down');
-        // Don't modify visibility here
     }, 1000);
 }
 
