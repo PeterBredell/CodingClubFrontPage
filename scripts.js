@@ -35,7 +35,28 @@ document.addEventListener('DOMContentLoaded', function() { /* Basically waits un
             window.scrollTo(0, aboutTop);
         }
     });
+
+    let isReturningHome = false;
+
+    window.addEventListener('scroll', function() {
+        if (!isReturningHome) {
+            const aboutTop = aboutSection.offsetTop;
+            if (window.scrollY < aboutTop) {
+                window.scrollTo(0, aboutTop);
+            }
+        }
+    });
+
+    // Add this new event listener
+    document.querySelector('.return-home-btn').addEventListener('click', function() {
+        isReturningHome = true;
+        returnHome();
+        setTimeout(() => {
+            isReturningHome = false;
+        }, 1500); // Adjust this timeout as needed
+    });
 });
+
 
 
 function fadeInHomePage() {
@@ -100,17 +121,34 @@ function enterWebsite() {
     }, 1000);
 }
 
-function returnHome () {
+/**
+ * Handles the transition from the main website content back to the home page.
+ * 
+ * This function performs the following actions: 
+ * 1. Applies a fade-in-down animation to the home page.
+ * 2. Enables the 'no-scroll' class on the body to disable scrolling.
+ * 3. Sets the home page to be fully visible.
+ * 
+ * */
+
+function returnHome() {
     const homePage = document.querySelector('.homePage');
-    const aboutSection = document.getElementById('about');
     const body = document.body;
 
+    // Remove any existing classes that might interfere
     homePage.classList.remove('fade-out-up');
-    body.classList.add('no-scroll');
     homePage.classList.add('fade-in-down');
     
+    // Disable scrolling
+    body.classList.add('no-scroll');
+    
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
-        window.scrollTo(0, 0);
+        homePage.classList.remove('fade-in-down');
+        // Make sure the home page is fully visible
+        homePage.style.display = 'flex';
     }, 1000);
 }
 

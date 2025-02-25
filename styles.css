@@ -34,6 +34,21 @@ body {
   animation: fadeOutUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+.homePage.fade-in-down {
+  animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -78,6 +93,21 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.homePage.fade-in-down {
+  animation: fadeInDown 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
