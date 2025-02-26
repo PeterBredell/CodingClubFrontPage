@@ -8,7 +8,6 @@
  * 4. Adds a scroll event listener to ensure scrolling starts from the 'about' section.
  * 
  */
-
 document.addEventListener('DOMContentLoaded', function() { /* Basically waits until the website loaded and then starts the animations*/
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
@@ -55,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function() { /* Basically waits un
     });
 
     // Remove all scroll event listeners related to the button positioning
+
+    // Add this line to start the auto-scrolling carousel
+    startCarouselAutoScroll();
 });
 
 
@@ -172,4 +174,31 @@ function returnHome() {
     }, 1000);
 }
 
+function startCarouselAutoScroll() {
+    const carouselInputs = document.querySelectorAll('.carousel-container input[type="radio"]');
+    let currentIndex = 0;
+    let isReversing = false;
+    carouselInputs[0].checked = true;
 
+    setInterval(() => {
+        if (!isReversing) {
+            currentIndex++;
+            if (currentIndex >= carouselInputs.length - 1) {
+                isReversing = true;
+            }
+        } else {
+            currentIndex--;
+            if (currentIndex <= 0) {
+                isReversing = false;
+            }
+        }
+        carouselInputs[currentIndex].checked = true;
+    }, 5000);
+
+    carouselInputs.forEach(input => {
+        input.addEventListener('click', function() {
+            currentIndex = Array.from(carouselInputs).indexOf(this);
+            isReversing = currentIndex === carouselInputs.length - 1;
+        });
+    });
+}
