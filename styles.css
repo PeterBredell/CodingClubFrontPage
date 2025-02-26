@@ -897,6 +897,7 @@ body { /*Body styles for the entire page */
     gap: 0.5rem;
     color: #9c6bc7;
     font-weight: 600;
+    justify-content: center;
     text-decoration: none;
     margin-top: auto;
     cursor: pointer;
