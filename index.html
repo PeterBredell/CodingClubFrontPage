@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduvos Coding Club</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="no-scroll"> 
+    <div class="particle-container"></div> 
+    <section class="homePage"> 
+        <div class="home"> 
+            <div class="homeLogo">
+                <div class="pulse-logo">
+                  <img src="images/EduvosLogo.png" alt="eduvos logo" class="logo-image" id="eduvoslogo"> 
+                  <img src="images/CODING CLUB.png" alt="club logo" class="logo-image"> 
+                </div>
+            </div>
+
+            <h1 class="animated-heading">
+                <span class="line">
+                    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                </span>
+                <span class="line">
+                    <span>t</span><span>o</span>
+                </span>
+                <span class="line">
+                    <span>E</span><span>d</span><span>u</span><span>v</span><span>o</span><span>s</span>
+                </span>
+                <span class="line">
+                    <span>C</span><span>o</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                </span>
+                <span class="line">
+                    <span>C</span><span>l</span><span>u</span><span>b</span><span>!</span>
+                </span>
+            </h1>
+
+            <div class="button">
+              <button class="glowing-btn" onclick="enterWebsite()">
+              <span class="glowing-txt">E<span class="faulty-letter">N</span>TER</span>
+              </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section section"> 
+        <div class="return-home-btn">
+            <button class="glowing-btn" onclick="returnHome()">
+            <span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>
+            </button>
+        </div>
+        <div class="text-container">
+            <div class="title-wrapper">
+                <h2 class="section-title">About the club</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <p class="about-text">
+                Welcome to the Eduvos Coding Club! We're a dynamic community of passionate coders dedicated to learning and growing together. Our club serves as a hub for students interested in software development, web technologies, and programming innovation.
+            </p>
+            
+            <div class="about-cards"> 
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Learn &amp; Grow</h3>
+                        <p class="card-hover__text">Weekly workshops and hands-on coding sessions focused on real-world applications</p>
+                        <a href="#learnAndGrow" class="card-hover__link">
+                            <span>Explore</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Build Projects</h3>
+                        <p class="card-hover__text">Collaborative projects and exciting hackathon opportunities to learn and build a CV </p>
+                        <a href="#buildProjects" class="card-hover__link">
+                            <span>Discover</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Connect</h3>
+                        <p class="card-hover__text">Network with fellow coders and industry professionals that lead to life changing opportunities</p>
+                        <a href="#connect" class="card-hover__link">
+                            <span>Join Us</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-details">
+                <div class="detail-section">
+                    <h3>What We Offer</h3>
+                    <ul>
+                        <li>Hands-on coding workshops</li>
+                        <li>Project-based learning experiences</li>
+                        <li>Mentorship from experienced developers</li>
+                        <li>Hackathons and coding competitions</li>
+                        <li>Industry insights and career guidance</li>
+                    </ul>
+                </div>
+                <div class="detail-section">
+                    <h3>Our Focus Areas</h3>
+                    <ul>
+                        <li>Web Development (Frontend &amp; Backend)</li>
+                        <li>Mobile App Development</li>
+                        <li>Software Engineering Principles</li>
+                        <li>Database Management</li>
+                        <li>Cloud Computing &amp; DevOps</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="learnAndGrowSection" id="learnAndGrow">
+                <div class="section-background">
+                    <h1 class="heading">Learn &amp; Grow</h1>
+                    <p>Ready to take your coding skills to the next level? <br> Join the Eduvos Coding Club today and join us on our many events where we get the opportunities to grow with our peers</p>
+                    <div class="learn-cards">
+                        <div class="card-hover">
+                            <div class="card-hover__content">
+                                <h3 class="card-hover__title">Our Mission</h3>
+                                <p class="card-hover__text">Our mission is to provide a supportive community for students to learn, grow, and succeed in the tech industry</p>
+                                <div class="circle-image">
+                                    <img src="images/WorkshopImage.jpeg" alt="mission image" class="circle-image"> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card-hover">
+                            <div class="card-hover__content">
+                                <h3 class="card-hover__title">Our Activities</h3>
+                                <ul class="card-hover__text">
+                                    <li>Weekly workshops</li>
+                                    <li>Hands-on coding sessions</li>
+                                    <li>Collaborative projects</li>
+                                    <li>Hackathons and coding competitions</li>
+                                </ul>
+                                <div class="circle-image">
+                                    <img src="images/MicrosoftImage.jpeg" alt="activities image" class="circle-image"> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-hover">
+                            <div class="card-hover__content">
+                                <h3 class="card-hover__title">Our Club</h3>
+                                <p class="card-hover__text">Join a vibrant community of passionate coders! Our club is your launchpad to cutting-edge tech skills, exciting projects, and invaluable industry connections.</p>
+                                <div class="circle-image">
+                                    <img src="images/Network.jpeg" alt="club image" class="circle-image"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="BuildProjectsSection" id="buildProjects">
+                <div class="section-background">
+                <h1 class="heading">Build Projects</h1>
+                <p>Our club offers a platform for you to collaborate with other members and work on exciting projects.<br> We also host hackathons and coding competitions to challenge your skills</p>
+                <div class="learn-cards">
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                            <a href="https://github.com/PeterBredell/pass-strength-checker" class="card-hover__link" >Password Strength Checker</a>
+                            <p class="card-hover__text">A CLI program made to enfore good passwords.</p>
+                            <div class="circle-image">
+                                <img src="images/Network.jpeg" alt="club image" class="circle-image"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                            <a href="https://github.com/PeterBredell/WeatherWebsite" class="card-hover__link" >Weather Website</a>
+                            <p class="card-hover__text">A website made in a workshop to add to your portfolio.</p>
+                            <div class="circle-image">
+                                <img src="images/Network.jpeg" alt="club image" class="circle-image"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                            <a href="https://github.com/Tcndiamond/MyOwntachiyomiJ2K" class="card-hover__link" >My own tachi</a>
+                            <p class="card-hover__text">A free and open source manga reader.</p>
+                            <div class="circle-image">
+                                <img src="images/Network.jpeg" alt="club image" class="circle-image"> 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="connectSection" id="connect">
+                <div class="section-background">
+                    <h1 class="heading">Connect</h1>
+                    <p>Connect with fellow coders and industry professionals through our club.<br> We offer networking opportunities, mentorship, and career guidance to help you succeed in the tech industry</p>
+                    <br>
+                    <button class="glowing-btn" onclick="joinClub()">
+                        <span class="glowing-txt">JOIN NOW</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="scripts.js" defer></script>
+    <footer class="section-background">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Useful Links</h3>
+                    <nav class="footer-links">
+                        <a href="#" class="glowing-txt">Home</a>
+                        <a href="#about" class="glowing-txt">About</a>
+                        <a href="#learnAndGrow" class="glowing-txt">Events</a>
+                    </nav>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <input type="text" placeholder="Enter your name" required>
+                        <button type="submit" class="glowing-btn"><span class="glowing-txt">Join</span></button>
+                    </form>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <p class="footer-contact">
+                        44 Alsatian Rd, Glen Austin AH, Midrand, 1685
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/VwdhhM3H" class="glowing-txt">Discord</a>
+                        <a href="https://chat.whatsapp.com/ItuFe3j18bk61qxCPIc2bD" class="glowing-txt">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
