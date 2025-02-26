@@ -1206,14 +1206,14 @@ div.item {
     transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
     border-radius: 10px;
-    border: 2px solid rgba(156, 107, 199, 0.3);
+    border: 2px solid rgb(156, 107, 199);
 }
 
-div.item:nth-of-type(1) { --offset: 1; background: rgba(156, 107, 199, 0.1); }
-div.item:nth-of-type(2) { --offset: 2; background: rgba(156, 107, 199, 0.1); }
-div.item:nth-of-type(3) { --offset: 3; background: rgba(156, 107, 199, 0.1); }
-div.item:nth-of-type(4) { --offset: 4; background: rgba(156, 107, 199, 0.1); }
-div.item:nth-of-type(5) { --offset: 5; background: rgba(156, 107, 199, 0.1); }
+div.item:nth-of-type(1) { --offset: 1; background: rgba(83, 38, 122, 0.562); }
+div.item:nth-of-type(2) { --offset: 2; background: rgba(83, 38, 122, 0.562); }
+div.item:nth-of-type(3) { --offset: 3; background: rgb(83, 38, 122, 0.562); }
+div.item:nth-of-type(4) { --offset: 4; background: rgba(83, 38, 122, 0.562); }
+div.item:nth-of-type(5) { --offset: 5; background: rgb(83, 38, 122, 0.562); }
 
 .carousel-container input[type="radio"] {
     appearance: none;
