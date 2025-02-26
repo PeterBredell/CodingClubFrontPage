@@ -651,6 +651,54 @@ body { /*Body styles for the entire page */
   }
 }
 
+.return-home-btn {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px); /* Moves it up slightly */
+  pointer-events: none; /* Prevents interaction while hidden */
+}
+
+.return-home-btn {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fixed Home Button - Top Left */
+.fixed-home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: none;
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+  z-index: 1000;
+}
+
+/* Fade in the fixed home button */
+.fixed-home-btn.fade-in {
+  opacity: 1;
+}
+
+/* Fade out the fixed home button */
+.fixed-home-btn.fade-out {
+  opacity: 0;
+}
+
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Prevents clicking when invisible */
+}
+
+.fade-in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
 .section {
   overflow: auto;
 }

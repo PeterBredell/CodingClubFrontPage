@@ -8,54 +8,40 @@
  * 4. Adds a scroll event listener to ensure scrolling starts from the 'about' section.
  * 
  */
-document.addEventListener('DOMContentLoaded', function() { /* Basically waits until the website loaded and then starts the animations*/
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    const originalHomeButton = document.querySelector('.return-home-btn'); // Original button
+    const fixedHomeButton = document.createElement('button'); // New top-left button
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    createParticles();
-    fadeInHomePage();
-
-    const aboutSection = document.getElementById('about');
-    window.addEventListener('scroll', function() {
-        const aboutTop = aboutSection.offsetTop;
-        if (window.scrollY < aboutTop) {
-            window.scrollTo(0, aboutTop);
-        }
-    });
-
-    let isReturningHome = false;
+    // Create the new top-left button and add to the DOM
+    fixedHomeButton.classList.add('fixed-home-btn', 'glowing-btn');
+    fixedHomeButton.innerHTML = '<span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>';
+    fixedHomeButton.style.display = 'none'; // Initially hidden
+    fixedHomeButton.onclick = returnHome; // Attach same function
+    document.body.appendChild(fixedHomeButton);
 
     window.addEventListener('scroll', function() {
-        if (!isReturningHome) {
-            const aboutTop = aboutSection.offsetTop;
-            if (window.scrollY < aboutTop) {
-                window.scrollTo(0, aboutTop);
-            }
-        }
-    });
+        if (window.scrollY > 50) {
+            // Fade out the original button
+            originalHomeButton.classList.add('fade-out');
+            originalHomeButton.classList.remove('fade-in');
 
-    // Add this new event listener
-    document.querySelector('.return-home-btn').addEventListener('click', function() {
-        isReturningHome = true;
-        returnHome();
-        setTimeout(() => {
-            isReturningHome = false;
-        }, 1500); // Adjust this timeout as needed
+            // Show the fixed top-left button
+            fixedHomeButton.classList.add('fade-in');
+            fixedHomeButton.classList.remove('fade-out');
+            fixedHomeButton.style.display = 'block';
+        } else {
+            // Show original button
+            originalHomeButton.classList.add('fade-in');
+            originalHomeButton.classList.remove('fade-out');
+
+            // Hide fixed top-left button
+            fixedHomeButton.classList.add('fade-out');
+            fixedHomeButton.classList.remove('fade-in');
+            setTimeout(() => { fixedHomeButton.style.display = 'none'; }, 500); // Hide after fade-out
+        }
     });
 });
+
 
 
 
