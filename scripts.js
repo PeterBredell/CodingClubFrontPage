@@ -8,6 +8,7 @@
  * 4. Adds a scroll event listener to ensure scrolling starts from the 'about' section.
  * 
  */
+
 document.addEventListener('DOMContentLoaded', function() { /* Basically waits until the website loaded and then starts the animations*/
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
