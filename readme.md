@@ -6,8 +6,10 @@
   <em>Building Community Through Code</em>
 </p>
 
-## ✨ Live Demo
-[View Live Demo](#) <!-- Add your deployed site link here -->
+## ✨ Demo Preview
+<div align="center">
+    <img src="demo/website-demo.gif" alt="Website Demo" width="640"/>  
+</div>
 
 ## 🎯 Project Overview
 An interactive website for the Eduvos Coding Club featuring:
