@@ -68,7 +68,7 @@ Kgothatso Mamabolo  EDUV9052968
 Nogoni Simelane EDUV9143165
 
 ## 📸 Screenshots
-<p align="center"> <img src="images/homescreen.png" width="400" alt="Welcome Page"/> <img src="images/about.png" width="400" alt="About Section"/> </p>
+<p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/About.PNG" width="400" alt="About Section"/> </p>
 
 ## 🔮 Future Improvements
 - <input disabled="" type="checkbox"> Add user authentication
