@@ -8,7 +8,7 @@
 
 ## ✨ Demo Preview
 <div align="center">
-    <img src="demo/website-demo.gif" alt="Website Demo" width="640"/>  
+    <img src="demo/demo-video.gif" alt="Website Demo" width="640"/>  
 </div>
 
 ## 🎯 Project Overview
