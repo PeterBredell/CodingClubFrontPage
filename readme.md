@@ -71,11 +71,11 @@ Nogoni Simelane EDUV9143165
 <p align="center"> <img src="screenshots/welcome.png" width="400" alt="Welcome Page"/> <img src="screenshots/about.png" width="400" alt="About Section"/> </p>
 
 ## 🔮 Future Improvements
-<input disabled="" type="checkbox"> Add user authentication
-<input disabled="" type="checkbox"> Implement event registration
-<input disabled="" type="checkbox"> Create member dashboard
-<input disabled="" type="checkbox"> Add project submission system
-<input disabled="" type="checkbox"> Optimize 1500 lines of css 
+- <input disabled="" type="checkbox"> Add user authentication
+- <input disabled="" type="checkbox"> Implement event registration
+- <input disabled="" type="checkbox"> Create member dashboard
+- <input disabled="" type="checkbox"> Add project submission system
+- <input disabled="" type="checkbox"> Optimize 1500 lines of css 
 
 ## 🤝 Contributing
 Feel free to:
