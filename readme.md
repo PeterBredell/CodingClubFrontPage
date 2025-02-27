@@ -63,9 +63,9 @@ Built professional UI/UX components
 Developed team showcase features
 
 ## 👥 Team Members
-Peter Bredell EDUV8229212 (Team Leader)
-Kgothatso Mamabolo  EDUV9052968
-Nogoni Simelane EDUV9143165
+- Peter Bredell EDUV8229212
+- Kgothatso Mamabolo  EDUV9052968
+- Nogoni Simelane EDUV9143165
 
 ## 📸 Screenshots
 <p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/About.PNG" width="400" alt="About Section"/> </p>
