@@ -1,27 +1,53 @@
-# Eduvos Coding Club Website
+# 🚀 Eduvos Coding Club Website - Hackathon Project
 
-## Why this project?
+<p align="center">
+  <img src="images/EduvosLogo.png" width="200" alt="Eduvos Logo"/>
+  <br>
+  <em>Building Community Through Code</em>
+</p>
 
-This project is for a hackathon and I thought it would be fun to learn, practice and implement transitions and templates for my websites.
+## ✨ Live Demo
+[View Live Demo](#) <!-- Add your deployed site link here -->
 
-## What are we doing better next time?
+## 🎯 Project Overview
+An interactive website for the Eduvos Coding Club featuring:
+- 🌟 Dynamic animations and transitions
+- 🎨 Modern, responsive design
+- 🔄 Interactive carousel for team members
+- ✨ Particle effects background
+- 🔗 LinkedIn integration
+- 📱 Mobile-friendly interface
 
-I want to use a framework like react and also want to make use of css template code such as tailwind
+## 🛠️ Built With
+- HTML5
+- CSS3 (with animations)
+- Vanilla JavaScript
+- No frameworks - Pure coding challenge!
 
+## 🌈 Key Features
+- **Interactive Welcome Page**
+  - Custom particle system
+  - Animated text effects
+  - Smooth transitions
 
-## To do:
-1. Choose a and apply a button
-2. Create a transition between welcome page and parralax page
-3. Remove scrolling functionality on welcome page
-4. Start with the other attributes on the on the page such as the about section.
+- **Dynamic Navigation**
+  - Smart scrolling behavior
+  - Floating home button
+  - Smooth section transitions
 
+- **Team Showcase**
+  - Auto-scrolling carousel
+  - LinkedIn profile integration
+  - Professional member cards
 
-## What Peter Learned?
-- How to use CSS transitions
-- How to create a parrallax effect
-- How to remove scrolling functionality
-- 
+## 🎨 Design Highlights
+- Custom glowing button effects
+- Responsive card layouts
+- Dynamic color schemes
+- Smooth animations
+- Professional typography
 
-## What .. Learned?
-
-## What .. Learned?
+## 🚀 Quick Start
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/eduvos-coding-club
