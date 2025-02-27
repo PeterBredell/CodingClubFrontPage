@@ -1361,5 +1361,5 @@ div.item img {
     left: 20px;
     z-index: 1000;
     transform: scale(0.7);
-    opacity: 0;
+    opacity: 1;
 }
