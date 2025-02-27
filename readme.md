@@ -58,11 +58,11 @@ git clone https://github.com/yourusername/eduvos-coding-club
 3. No build process required!
 
 ## 💡 Hackathon Learning Outcomes
-Mastered CSS animations and transitions
-Implemented complex JavaScript functionality
-Created responsive layouts without frameworks
-Built professional UI/UX components
-Developed team showcase features
+- Mastered CSS animations and transitions
+- Implemented complex JavaScript functionality
+- Created responsive layouts without frameworks
+- Built professional UI/UX components
+- Developed team showcase features
 
 ## 👥 Team Members
 - Peter Bredell EDUV8229212
@@ -90,4 +90,4 @@ Feel free to:
 This project is licensed under the MIT License - see the LICENSE file for details
 
 ## 🏆 Hackathon Achievement
-Built in 5 days for the Coding Club hackathon with focus on creating the face of the coding club.
+Built in 5 days for the Coding Club hackathon with focus on creating the face of the coding club and learning as much as possible. 
