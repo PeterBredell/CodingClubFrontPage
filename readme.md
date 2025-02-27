@@ -51,7 +51,7 @@ An interactive website for the Eduvos Coding Club featuring:
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/eduvos-coding-club
-
+```
 2. Open index.html in your browser
 3. No build process required!
 
