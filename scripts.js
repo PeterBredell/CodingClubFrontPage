@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() { /* Basically waits un
 
     createParticles();
     fadeInHomePage();
+    startCarouselAutoScroll();
 
     const aboutSection = document.getElementById('about');
     window.addEventListener('scroll', function() {
@@ -55,8 +56,37 @@ document.addEventListener('DOMContentLoaded', function() { /* Basically waits un
 
     // Remove all scroll event listeners related to the button positioning
 
-    // Add this line to start the auto-scrolling carousel
-    startCarouselAutoScroll();
+    // Add dynamic home button functionality
+    const originalHomeButton = document.querySelector('.return-home-btn');
+    const fixedHomeButton = document.createElement('button');
+
+    fixedHomeButton.classList.add('fixed-home-btn', 'glowing-btn');
+    fixedHomeButton.innerHTML = '<span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>';
+    fixedHomeButton.style.display = 'none';
+    fixedHomeButton.onclick = returnHome;
+    document.body.appendChild(fixedHomeButton);
+
+    window.addEventListener('scroll', function() {
+        const aboutTop = aboutSection.offsetTop;
+        if (window.scrollY < aboutTop) {
+            window.scrollTo(0, aboutTop);
+        }
+
+        // Handle button visibility
+        if (window.scrollY > 50) {
+            originalHomeButton.classList.add('fade-out');
+            originalHomeButton.classList.remove('fade-in');
+            fixedHomeButton.classList.add('fade-in');
+            fixedHomeButton.classList.remove('fade-out');
+            fixedHomeButton.style.display = 'block';
+        } else {
+            originalHomeButton.classList.add('fade-in');
+            originalHomeButton.classList.remove('fade-out');
+            fixedHomeButton.classList.add('fade-out');
+            fixedHomeButton.classList.remove('fade-in');
+            setTimeout(() => { fixedHomeButton.style.display = 'none'; }, 500);
+        }
+    });
 });
 
 

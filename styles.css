@@ -1306,6 +1306,7 @@ div.item img {
   transition: background-color 0.5s ease-in-out;
   margin: 0 auto;  /* Center horizontally */
   width: fit-content;
+  cursor: pointer;
 }
 
 .custom-button:hover {
@@ -1367,5 +1368,24 @@ div.item img {
 
 .button-link:hover {
     text-decoration: none;
+}
+
+.fixed-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
