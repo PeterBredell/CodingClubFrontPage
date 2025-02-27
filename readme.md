@@ -64,7 +64,7 @@ git clone https://github.com/yourusername/eduvos-coding-club
 - Built professional UI/UX components
 - Developed team showcase features
 
-## 👥 Team Members
+## 👥 Bazinga Team Members
 - Peter Bredell EDUV8229212
 - Kgothatso Mamabolo  EDUV9052968
 - Nogoni Simelane EDUV9143165
