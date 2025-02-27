@@ -5,8 +5,7 @@
   font-family: "Sarpanch", sans-serif, "serif", monospace;
 }
 
-
-body { /*Body styles for the entire page */
+body { 
   width: 100%;
   background: rgb(0, 0, 0);
   overflow-x: hidden;
@@ -30,7 +29,7 @@ body { /*Body styles for the entire page */
   padding: 0 15px;
 }
 
-.homePage.fade-out-up { /* Fade out animation for the home page  */
+.homePage.fade-out-up { 
   animation: fadeOutUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
@@ -61,7 +60,7 @@ body { /*Body styles for the entire page */
   gap: 2rem;
 }
 
-.homeLogo { /*  */
+.homeLogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +68,7 @@ body { /*Body styles for the entire page */
   margin: 1rem 0 2rem;
 }
 
-.pulse-logo { /* Pulse of the Eduvos and Club Logo on the home page  */
+.pulse-logo { 
   width: 300px;
   height: 300px;
   display: flex;
@@ -122,12 +121,10 @@ body { /*Body styles for the entire page */
   margin-right: auto;
 }
 
-/* Style for each line of the animated heading */
 .animated-heading .line {
   display: block;
 }
 
-/* Style for each span within a line of the animated heading */
 .animated-heading .line span {
   position: relative;
   display: inline-block;
@@ -137,8 +134,6 @@ body { /*Body styles for the entire page */
   transform: translateY(30px);
 }
 
-/* Animation delays for each span in the animated heading */
-/* This creates a cascading effect where each character appears slightly after the previous one */
 .animated-heading .line span:nth-child(1) { animation-delay: 0.1s; }
 .animated-heading .line span:nth-child(2) { animation-delay: 0.15s; }
 .animated-heading .line span:nth-child(3) { animation-delay: .2s; }
@@ -150,7 +145,7 @@ body { /*Body styles for the entire page */
 .animated-heading .line span:nth-child(9) { animation-delay: 0.5s; }
 
 
-@keyframes fadeInUp { /* Key frame rule for the fade in animation of the text */
+@keyframes fadeInUp { 
   from {
     transform: translateY(30px);
     opacity: 0;
@@ -161,7 +156,7 @@ body { /*Body styles for the entire page */
   }
 }
 
-.glowing-btn {  /* Button styles allowing for glowing */
+.glowing-btn {  
   position: relative;
   color: #9c6bc7;
   cursor: pointer;
@@ -180,7 +175,7 @@ body { /*Body styles for the entire page */
   animation: border-flicker 2s linear infinite;
 }
 
-.glowing-txt {  /* Text styles allowing for flickering*/
+.glowing-txt {  
   float: left;
   margin-right: -0.8em;
   -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em #9c6bc7;
@@ -935,12 +930,10 @@ body { /*Body styles for the entire page */
   height: 275px;
 }
 
-/* Add smooth scrolling to the entire document */
 html {
     scroll-behavior: smooth;
 }
 
-/* Add some padding to the sections to account for the scroll offset */
 #learnAndGrow,
 #buildProjects,
 #connect {
@@ -1108,7 +1101,7 @@ footer.section-background {
     font-size: 1em;
     margin-top: 0.5rem;
     text-align: center;
-    letter-spacing: 0.2em; /* Reduced from 0.5em to help with centering */
+    letter-spacing: 0.2em;
 }
 
 .footer-form .glowing-btn .glowing-txt {
@@ -1161,7 +1154,6 @@ footer.section-background {
     z-index: 2;
 }
 
-/* Carousel Styles */
 .carousel-container {
     height: 600px;
     margin: 2rem auto;
@@ -1175,11 +1167,9 @@ footer.section-background {
 }
 
 main#carousel {
-    /* ...existing carousel styles... */
     --items: 5;
 }
 
-/* Remove the 6th item style and the 6th input style */
 div.item:nth-of-type(6) { display: none; }
 .carousel-container input:nth-of-type(6) { display: none; }
 
@@ -1193,7 +1183,7 @@ main#carousel {
     justify-content: center;
     transform-style: preserve-3d;
     perspective: 600px;
-    --items: 5; /* Changed from 6 to 5 */
+    --items: 5; 
 }
 
 div.item {
@@ -1291,53 +1281,49 @@ div.item img {
     line-height: 1.6;
 }
 
-/* Button Styling */
 .custom-button {
   position: relative;
-  background-color: #710080; /* bg-sky-700 */
-  color: #F8FAFC; /* text-neutral-50 */
+  background-color: #710080; 
+  color: #F8FAFC;
   padding: 0.5rem 1.5rem 0.5rem 1rem;
   font-weight: bold;
   display: flex;
-  justify-content: center;  /* Center content inside button */
+  justify-content: center;  
   align-items: center;
   gap: 0.5rem;
-  border-radius: 0.375rem; /* rounded */
+  border-radius: 0.375rem; 
   transition: background-color 0.5s ease-in-out;
-  margin: 0 auto;  /* Center horizontally */
+  margin: 0 auto;  
   width: fit-content;
   cursor: pointer;
 }
 
 .custom-button:hover {
-  background-color: #6802c7; /* hover:bg-sky-600 */
+  background-color: #6802c7; 
 }
 
-/* Icon Styling */
 .custom-icon {
-  width: 2rem; /* w-8 */
-  height: 2rem; /* h-8 */
-  fill: #F8FAFC; /* fill-neutral-50 */
+  width: 2rem; 
+  height: 2rem; 
+  fill: #F8FAFC; 
 }
 
-/* Text Styling */
 .custom-text {
-  border-left: 2px solid #F8FAFC; /* border-l-2 */
-  padding-left: 0.25rem; /* px-1 */
+  border-left: 2px solid #F8FAFC; 
+  padding-left: 0.25rem;
 }
 
-/* Tooltip Styling */
 .custom-tooltip {
   position: absolute;
-  top: 4rem; /* top-16 */
+  top: 4rem; 
   left: 0;
   z-index: 10;
   padding: 0.5rem 1rem;
-  font-size: 0.875rem; /* text-sm */
-  color: #FFFFFF; /* text-white */
-  background-color: #0284C7; /* bg-sky-600 */
-  border-radius: 0.375rem; /* rounded-lg */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* shadow-sm */
+  font-size: 0.875rem; 
+  color: #FFFFFF; 
+  background-color: #0284C7; 
+  border-radius: 0.375rem; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -1346,16 +1332,15 @@ div.item img {
   opacity: 1;
 }
 
-/* Tooltip Arrow */
 .custom-tooltip::before {
   content: '';
   position: absolute;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #0284C7; /* before:bg-sky-600 */
+  background-color: #0284C7; 
   transform: rotate(45deg);
-  top: -0.25rem; /* before:-top-1 */
-  left: 1.25rem; /* before:left-20 */
+  top: -0.25rem; 
+  left: 1.25rem; 
 }
 
 .button-link {
@@ -1378,6 +1363,3 @@ div.item img {
     transform: scale(0.7);
     opacity: 0;
 }
-
-
-
