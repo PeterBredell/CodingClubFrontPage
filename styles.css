@@ -1119,7 +1119,7 @@ footer.section-background {
 }
 
 .footer-links a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1159,10 +1159,11 @@ footer.section-background {
     float: none;
     margin-right: 0;
     display: inline-block;
+    animation: glowing 2s infinite;
 }
 
 .footer-contact {
-    color: var(--text-color);
+    color: white;
     text-align: center;
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -1175,9 +1176,9 @@ footer.section-background {
 }
 
 .footer-social a {
-    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    color: white;
 }
 
 .footer-social a:hover {
