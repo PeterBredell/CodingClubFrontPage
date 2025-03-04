@@ -109,11 +109,16 @@ function enterWebsite() {
     const homePage = document.querySelector('.homePage');
     const aboutSection = document.getElementById('about');
     const body = document.body;
+    const themeSwitch = document.getElementById('theme-switch');
+
 
     aboutSection.style.visibility = 'visible';
     aboutSection.style.display = 'block';
     aboutSection.style.opacity = '0';
     aboutSection.style.transform = 'translateY(30px)';
+    
+    // Show the theme switch and home button
+    themeSwitch.style.display = 'flex';
     
     homePage.classList.add('fade-out-up');
     body.classList.remove('no-scroll');
@@ -131,6 +136,12 @@ function returnHome() {
     const homePage = document.querySelector('.homePage');
     const aboutSection = document.getElementById('about');
     const body = document.body;
+    const themeSwitch = document.getElementById('theme-switch');
+    const fixedHomeBtn = document.querySelector('.fixed-home-btn');
+    
+    // Hide the theme switch and home button
+    themeSwitch.style.display = 'none';
+    fixedHomeBtn.style.display = 'none';
     
     homePage.style.display = 'flex';
     

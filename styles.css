@@ -5,6 +5,54 @@
   font-family: "Sarpanch", sans-serif, "serif", monospace;
 }
 
+:root {
+  --primary-color: #9c6bc7;
+  --secondary-color: #340779;
+  --background-color: #0f0514;
+  --text-color: #ffffff;
+  --carousel-color: #6000b48c;
+}
+
+.lightmode {
+  --primary-color: #9c6bc7;
+  --secondary-color: #340779;
+  --background-color: #f9f1f1;
+  --text-color: #000000;
+  --carousel-color: #9c6bc785;
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.lightmode #theme-switch svg:last-child {
+  display: block;
+  fill: var(--primary-color);
+}
+
 body { 
   width: 100%;
   background: rgb(0, 0, 0);
@@ -367,7 +415,7 @@ body {
 }
 
 .section-title {
-  color: white;
+  color: var(--text-color);
   margin-bottom: 20px;
   font-size: 2.5em;
 }
@@ -380,9 +428,10 @@ body {
 }
 
 .about-text {
-  color: white;
+  color: var(--text-color);
   font-size: 1.3em;
-  text-align: justify;
+  display: flex;
+  text-align: center;
   padding: 10px;
   border-radius: 10px;
 }
@@ -405,7 +454,7 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: var(--text-color);
   font-size: 18px;
 }
 
@@ -445,7 +494,7 @@ body {
 
 .project-card .cardButton {
   background-color: rgb(12, 54, 73);
-  color: white;
+  color: var(--text-color);
   padding: 5px 8px;
   cursor: pointer;
   font-family: 'Courier New', monospace;
@@ -654,7 +703,7 @@ body {
 
 .about-section {
     padding: 4rem 2rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--background-color);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     margin: 0 auto;
@@ -665,7 +714,7 @@ body {
 }
 
 .about-section .section-title {
-  color: white;
+  color: var(--text-color);
   font-size: 3em;
   margin-bottom: 1em;
   text-align: center;
@@ -683,7 +732,7 @@ body {
 }
 
 .about-section .about-text {
-  color: white;
+  color: var(--text-color);
   font-size: 1.3em;
   text-align: justify;
   padding: 20px;
@@ -692,7 +741,7 @@ body {
 
 .about-section {
     padding: 4rem 2rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--background-color);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     margin: 2rem auto;
@@ -700,7 +749,7 @@ body {
 }
 
 .about-text {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.3em;
     line-height: 1.6;
     margin-bottom: 3rem;
@@ -736,7 +785,7 @@ body {
 }
 
 .highlight-item p {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1em;
     line-height: 1.4;
 }
@@ -752,7 +801,7 @@ body {
 }
 
 .detail-section {
-    color: white;
+    color: var(--text-color);
     text-align: left;
     font-size: 1.3em;
 }
@@ -856,7 +905,7 @@ body {
 .card-hover {
     --background: rgba(156, 107, 199, 0.1);
     --surface: rgba(156, 107, 199, 0.2);
-    --text: #fff;
+    --text: var(--text-color);
     --border: rgba(156, 107, 199, 0.3);
     position: relative;
     border-radius: 1rem;
@@ -924,7 +973,7 @@ body {
 }
 
 #sections {
-  color: white;
+  color: var(--text-color);
 }
 
 #eduvoslogo {
@@ -940,7 +989,7 @@ html {
 #buildProjects,
 #connect {
     scroll-margin-top: 2rem;
-    color: white;
+    color: var(--text-color);
     padding-top: 2rem;
 }
 
@@ -1070,7 +1119,7 @@ footer.section-background {
 }
 
 .footer-links a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1113,7 +1162,7 @@ footer.section-background {
 }
 
 .footer-contact {
-    color: white;
+    color: var(--text-color);
     text-align: center;
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -1126,7 +1175,7 @@ footer.section-background {
 }
 
 .footer-social a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -1208,14 +1257,14 @@ div.item {
     text-align: center;
 }
 
-div.item:nth-of-type(1) { --offset: 1; background: rgba(83, 38, 122, 0.562); }
-div.item:nth-of-type(2) { --offset: 2; background: rgba(83, 38, 122, 0.562); }
-div.item:nth-of-type(3) { --offset: 3; background: rgb(83, 38, 122, 0.562); }
-div.item:nth-of-type(4) { --offset: 4; background: rgba(83, 38, 122, 0.562); }
-div.item:nth-of-type(5) { --offset: 5; background: rgb(83, 38, 122, 0.562); }
+div.item:nth-of-type(1) { --offset: 1; background: var(--carousel-color); }
+div.item:nth-of-type(2) { --offset: 2; background: var(--carousel-color); }
+div.item:nth-of-type(3) { --offset: 3; background: var(--carousel-color); }
+div.item:nth-of-type(4) { --offset: 4; background: var(--carousel-color); }
+div.item:nth-of-type(5) { --offset: 5; background: var(--carousel-color); }
 
 div.item h3 {
-    color: white;
+    color: var(--text-color);
     margin: 1rem 0;
 }
 
@@ -1269,14 +1318,14 @@ div.item img {
 }
 
 .connectSection .section-background .heading {
-    color: white;
+    color: var(--text-color);
     font-size: 2.5em;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .connectSection .section-background p {
-    color: white;
+    color: var(--text-color);
     font-size: 1.2em;
     text-align: center;
     margin-bottom: 2rem;
@@ -1286,7 +1335,7 @@ div.item img {
 .custom-button {
   position: relative;
   background-color: #9000a3; 
-  color: #F8FAFC;
+  color: var(--text-color);
   padding: 0.5rem 1.5rem 0.5rem 1rem;
   font-weight: bold;
   display: flex;
@@ -1322,7 +1371,7 @@ div.item img {
   z-index: 10;
   padding: 0.5rem 1rem;
   font-size: 0.875rem; 
-  color: #FFFFFF; 
+  color: var(--text-color); 
   background-color: #0284C7; 
   border-radius: 0.375rem; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
@@ -1339,7 +1388,7 @@ div.item img {
   position: absolute;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #0284C7; 
+  background-color: #00d9ff; 
   transform: rotate(45deg);
   top: -0.25rem; 
   left: 1.25rem; 
@@ -1364,4 +1413,5 @@ div.item img {
     z-index: 1000;
     transform: scale(0.7);
     opacity: 1;
+    display: none; /* Initially hide the button */
 }
