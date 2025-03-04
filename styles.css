@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Sarpanch", sans-serif, "serif", monospace;
+  
 }
 
 :root {
@@ -11,6 +12,7 @@
   --background-color: #0f0514;
   --text-color: #ffffff;
   --carousel-color: #6000b48c;
+  --background-linear: linear-gradient(135deg, #0f0514 0%, #1a0b2e 50%, #261037 100%);
 }
 
 .lightmode {
@@ -19,6 +21,7 @@
   --background-color: #f9f1f1;
   --text-color: #000000;
   --carousel-color: #9c6bc785;
+  --background-linear: linear-gradient(135deg, #f9f1f1 0%, #ffb998 50%, #f9f1f1 100%);
 }
 
 #theme-switch {
@@ -27,7 +30,7 @@
   padding: 0;
   border-radius: 50%;
   background-color: transparent;
-  display: none; 
+  display: flex; /* Changed from 'none' to 'flex' */
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -55,10 +58,9 @@
 
 body { 
   width: 100%;
-  background: rgb(0, 0, 0);
   overflow-x: hidden;
   font-family: "Sarpanch", sans-serif, "serif", monospace;
-  background: linear-gradient(135deg, #0f0514 0%, #1a0b2e 50%, #261037 100%);
+  background: var(--background-linear);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
