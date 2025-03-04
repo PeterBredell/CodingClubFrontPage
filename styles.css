@@ -37,6 +37,8 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  z-index: 1000; /* Ensure it stays on top */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
 }
 
 #theme-switch svg{
@@ -1238,6 +1240,11 @@ main#carousel {
     transform-style: preserve-3d;
     perspective: 600px;
     --items: 5; 
+    touch-action: pan-y pinch-zoom; 
+}
+
+main#carousel:active {
+    cursor: grabbing; 
 }
 
 div.item {
@@ -1312,11 +1319,14 @@ div.item img {
 
     main#carousel {
         height: 300px;
+        touch-action: pan-x pan-y pinch-zoom; /* Enable all touch gestures on mobile */
     }
 
     div.item {
-        width: 200px;
-        height: 250px;
+        width: 280px;
+        height: 380px;
+        padding: 0.8rem;
+        user-select: none; /* Prevent text selection while swiping */
     }
 }
 
@@ -1482,7 +1492,6 @@ div.item img {
     div.item {
         width: 280px;
         height: 380px;
-        padding: 0.8rem;
     }
 
     /* Footer */

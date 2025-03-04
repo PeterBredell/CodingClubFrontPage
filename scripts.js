@@ -160,10 +160,44 @@ function returnHome() {
 
 function startCarouselAutoScroll() {
     const carouselInputs = document.querySelectorAll('.carousel-container input[type="radio"]');
+    const carousel = document.getElementById('carousel');
     let currentIndex = 0;
     let isReversing = false;
+    let touchStartX = 0;
+    let touchEndX = 0;
     carouselInputs[0].checked = true;
 
+    // Add touch event listeners
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, false);
+
+    carousel.addEventListener('touchmove', (e) => {
+        e.preventDefault(); // Prevent scrolling while swiping
+    }, false);
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+        const swipeThreshold = 50; // Minimum swipe distance
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - go to previous
+                currentIndex = Math.max(0, currentIndex - 1);
+            } else {
+                // Swipe left - go to next
+                currentIndex = Math.min(carouselInputs.length - 1, currentIndex + 1);
+            }
+            carouselInputs[currentIndex].checked = true;
+        }
+    }
+
+    // Keep existing interval code
     setInterval(() => {
         if (!isReversing) {
             currentIndex++;
