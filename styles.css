@@ -383,7 +383,7 @@ body {
   color: white;
   font-size: 1.3em;
   text-align: justify;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
 }
 
@@ -754,6 +754,7 @@ body {
 .detail-section {
     color: white;
     text-align: left;
+    font-size: 1.3em;
 }
 
 .detail-section h3 {
@@ -884,6 +885,7 @@ body {
 .card-hover__text {
     color: var(--text);
     line-height: 1.5;
+    font-size:1.3em;
 }
 
 .card-hover__link {
@@ -1283,7 +1285,7 @@ div.item img {
 
 .custom-button {
   position: relative;
-  background-color: #710080; 
+  background-color: #9000a3; 
   color: #F8FAFC;
   padding: 0.5rem 1.5rem 0.5rem 1rem;
   font-weight: bold;

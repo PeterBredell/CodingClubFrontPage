@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fixedHomeButton = document.createElement('button');
 
     fixedHomeButton.classList.add('fixed-home-btn', 'glowing-btn');
-    fixedHomeButton.innerHTML = '<span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>';
+    fixedHomeButton.innerHTML = '<span class="glowing-txt">F<span class="faulty-letter">I</span>ND</span>';
     fixedHomeButton.style.display = 'none';
     fixedHomeButton.onclick = returnHome;
     document.body.appendChild(fixedHomeButton);
