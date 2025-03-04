@@ -136,20 +136,16 @@ function returnHome() {
     const homePage = document.querySelector('.homePage');
     const aboutSection = document.getElementById('about');
     const body = document.body;
-    const themeSwitch = document.getElementById('theme-switch');
     const fixedHomeBtn = document.querySelector('.fixed-home-btn');
     
-    // Hide the theme switch and home button
-    themeSwitch.style.display = 'none';
+    // Only hide the home button, not the theme switch
     fixedHomeBtn.style.display = 'none';
     
     homePage.style.display = 'flex';
-    
     homePage.classList.remove('fade-out-up');
     homePage.classList.add('fade-in-down');
     
     aboutSection.style.display = 'none';
-    
     body.classList.add('no-scroll');
     
     window.scrollTo({
