@@ -1418,3 +1418,97 @@ div.item img {
     opacity: 1;
     display: none; /* Initially hide the button */
 }
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    /* Theme and Home buttons */
+    #theme-switch {
+        top: 10px;
+        right: 10px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .fixed-home-btn {
+        top: 10px;
+        left: 10px;
+        transform: scale(0.6);
+    }
+
+    /* Homepage */
+    .animated-heading {
+        font-size: 1.8em;
+        padding: 0 10px;
+    }
+
+    .glowing-btn {
+        font-size: 1.2em;
+        padding: 0.25em 0.75em;
+        letter-spacing: 0.3em;
+    }
+
+    /* About section */
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2em;
+        white-space: normal;
+    }
+
+    /* Cards */
+    .about-cards,
+    .learn-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .card-hover {
+        padding: 1.5rem;
+    }
+
+    .card-hover__text {
+        font-size: 1.1em;
+    }
+
+    /* Carousel */
+    .carousel-container {
+        height: 450px;
+        grid-template-rows: 350px 100px;
+    }
+
+    div.item {
+        width: 280px;
+        height: 380px;
+        padding: 0.8rem;
+    }
+
+    /* Footer */
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .animated-heading {
+        font-size: 1.5em;
+    }
+
+    .glowing-btn {
+        font-size: 1em;
+        letter-spacing: 0.2em;
+    }
+
+    div.item {
+        width: 240px;
+        height: 340px;
+    }
+}
