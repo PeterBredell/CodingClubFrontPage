@@ -271,4 +271,74 @@ function setupModals() {
             document.body.style.overflow = 'auto';
         }
     });
+
+        // Elements
+        const header = document.getElementById('header');
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Handle header background on scroll
+        function handleScroll() {
+          const scrolled = window.scrollY > 20;
+          if (scrolled) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+          
+          // Update active section
+          updateActiveSection();
+        }
+        
+        // Smooth scroll to section
+        function scrollToSection(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (!targetSection) return;
+          
+          const targetPosition = targetSection.offsetTop;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+        
+        // Update active section based on scroll position
+        function updateActiveSection() {
+          let currentSection = '';
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= (sectionTop - 300)) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+          
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-section') === currentSection) {
+              link.classList.add('active');
+            }
+          });
+        }
+        
+        // Event listeners
+        window.addEventListener('scroll', handleScroll);
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', scrollToSection);
+        });
+        
+        // Initial call to set correct state
+        handleScroll();
 }
+
+
+
+
+
