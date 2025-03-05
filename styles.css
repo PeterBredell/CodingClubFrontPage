@@ -905,10 +905,11 @@ body {
 
 .about-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
     margin: 3rem 0;
     padding: 0 1rem;
+    width: 100%;
 }
 
 .card-hover {
@@ -918,10 +919,11 @@ body {
     --border: rgba(156, 107, 199, 0.3);
     position: relative;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     background: var(--background);
     border: 1px solid var(--border);
     transition: transform 0.3s ease;
+    min-width: 0; 
 }
 
 .card-hover:hover {
@@ -972,6 +974,20 @@ body {
 
 .card-hover:hover .card-hover__link svg {
     transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
