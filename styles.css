@@ -24,6 +24,11 @@
   --background-linear: linear-gradient(135deg, #f9f1f1 0%, #ffb998 50%, #f9f1f1 100%);
 }
 
+
+.modal-headings{
+  color: var(--text-color);
+}
+
 #theme-switch {
   height: 50px;
   width: 50px;
@@ -933,6 +938,12 @@ body {
     color: #9c6bc7;
     font-size: 1.5em;
     font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-hover__title:hover {
+    color: var(--primary-color);
 }
 
 .card-hover__text {
@@ -1519,5 +1530,90 @@ div.item img {
     div.item {
         width: 240px;
         height: 340px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--background-linear);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(156, 107, 199, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2em;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    color: var(--text-color);
+    margin-top: 1.5rem;
+}
+
+.modal-body h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.modal-body ul li {
+    margin: 0.8rem 0;
+    position: relative;
+}
+
+.modal-body ul li:before {
+    content: "▹";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1.5rem;
+}
+
+.activity-section, .benefits-section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(156, 107, 199, 0.1);
+    border-radius: 10px;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

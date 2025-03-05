@@ -1,155 +1,207 @@
 # Eduvos Coding Club Website Documentation
 
-## Project Structure
-- `index.html` - Main HTML structure
-- `styles.css` - All styling and animations
-- `scripts.js` - Interactive functionality
-- `/images` - Website assets
+## File Structure
+- `index.html` - Main HTML file containing website structure
+- `styles.css` - Stylesheet for all components and animations
+- `scripts.js` - JavaScript functionality and interactions
+- `lightmode.js` - Theme switching functionality
+- `modals.html` - Modal templates for detailed content views
 
-## Key Components
+## Core Features
 
-### Homepage (Landing Page)
-- Animated welcome text with staggered letter animations
-- Pulsing Eduvos logo
-- Glowing "ENTER" button
-- Particle effect background
-
-### Navigation
-- Fixed home button that appears on scroll
-- Smooth scrolling between sections
-- Section anchors for direct linking
-
-### Sections
-
-#### About
-- Club introduction
-- Mission statement
-- Features grid with hover effects
-- What We Offer & Focus Areas lists
-
-#### Learn & Grow
-- Three-column card layout
-- Interactive hover effects
-- Circular images with overlay
-
-#### Build Projects
-- Project showcase cards
-- GitHub links
-- Project descriptions and thumbnails
-
-#### Connect
-- Carousel with team members
-- LinkedIn integration
-- Auto-scrolling functionality
-
-### Interactive Elements
-
-#### Glowing Button
-```css
-.glowing-btn {
-    /* Glowing button effect with pulsing border */
-    animation: border-flicker 2s linear infinite;
-}
-```
-
-#### Particle System
+### Theme System
 ```javascript
-function createParticles() {
-    // Creates floating background particles
-    // Each particle has random size, position, and animation duration
+// Theme switching functionality
+const enableLightMode = () => {
+    document.body.classList.add('lightmode');
+    localStorage.setItem('lightmode', 'active');
+};
+```
+- Light/Dark mode toggle
+- Theme persistence using localStorage
+- Dynamic color variable switching
+
+### Modal System
+```javascript
+// Modal initialization and handlers
+function setupModals() {
+    // Maps titles to modal IDs
+    const modals = {
+        'Our Mission': 'mission-modal',
+        'Our Activities': 'activities-modal',
+        'Our Club': 'club-modal'
+    };
 }
 ```
+- Click-to-open detailed content views
+- Multiple close options (button, outside click, ESC key)
+- Smooth animations
+- Scroll locking when modal is open
 
-#### Carousel
+### Carousel Implementation
 ```javascript
 function startCarouselAutoScroll() {
-    // Auto-scrolling carousel with reversing direction
-    // Manual control with radio buttons
-    // Smooth transitions between slides
+    // Auto-scrolling with touch support
+    // Direction reversal at ends
+    // Manual control via radio buttons
 }
 ```
+- Touch-enabled swipe functionality
+- Auto-scrolling with direction reversal
+- Manual controls
+- Responsive design
+
+### Particle System
+```javascript
+function createParticles() {
+    // Creates background particles
+    // Random size, position, and animation
+}
+```
+- Dynamic particle generation
+- Random movement patterns
+- Performance optimized
+
+## CSS Components
+
+### Buttons
+- `.glowing-btn` - Animated button with glow effect
+- `.custom-button` - LinkedIn profile buttons
+- `.fixed-home-btn` - Fixed position navigation button
+
+### Cards
+- `.card-hover` - Interactive card components
+- `.activity-section` - Activity display cards
+- `.project-card` - Project showcase cards
 
 ### Animations
+```css
+@keyframes fadeInUp { /* Entry animations */ }
+@keyframes float { /* Particle movement */ }
+@keyframes modalSlideIn { /* Modal entry */ }
+@keyframes pulse { /* Logo pulsing */ }
+```
 
-#### Page Transitions
+## JavaScript Functions
+
+### Navigation
 ```javascript
 function enterWebsite() {
-    // Fade out homepage
-    // Reveal main content
-    // Smooth scroll to about section
+    // Handles main page entry animation
+    // Initializes main content
 }
 
 function returnHome() {
-    // Hide main content
-    // Fade in homepage
-    // Reset scroll position
+    // Returns to landing page
+    // Resets scroll state
 }
 ```
 
-#### Visual Effects
+### Observer Pattern
+```javascript
+const observer = new IntersectionObserver((entries) => {
+    // Handles section visibility
+    // Triggers animations
+});
+```
+
+## Responsive Design
+
+### Breakpoints
+- 768px - Tablet/Mobile transition
+- 480px - Small mobile adjustments
+
+### Mobile Optimizations
 ```css
-/* Particle Animation */
-@keyframes float {
-    // Floating movement for background particles
-}
-
-/* Text Animation */
-@keyframes fadeInUp {
-    // Staggered text reveal animation
-}
-
-/* Button Effects */
-@keyframes border-flicker {
-    // Glowing border effect
+@media (max-width: 768px) {
+    /* Adjusted layouts */
+    /* Touch-optimized interactions */
+    /* Simplified animations */
 }
 ```
 
-### Responsive Design
-- Mobile-first approach
-- Flexible grid layouts
-- Breakpoint at 768px for tablet/mobile
-- Scaled images and text
-- Reorganized layouts for smaller screens
+## Event Handlers
 
-### Performance Optimizations
+### Touch Events
+```javascript
+carousel.addEventListener('touchstart', (e) => {
+    // Swipe detection
+    // Gesture handling
+});
+```
+
+### Scroll Management
+```javascript
+window.addEventListener('scroll', function() {
+    // Navigation visibility
+    // Scroll position management
+});
+```
+
+## Performance Considerations
+
+### Optimization Techniques
 - Will-change hints for animations
-- Document fragments for particle creation
+- Touch-action properties for mobile
 - Debounced scroll handlers
 - Cached DOM queries
-- Optimized transitions
+- Hardware acceleration where needed
+- Image optimization
 
-### Browser Support
+### Resource Loading
+- Deferred scripts
+- Preconnect for external resources
+- Lazy loading for images
+- Minified assets
+
+## Browser Compatibility
 - Modern browsers (Chrome, Firefox, Safari, Edge)
-- Fallbacks for older browsers
-- CSS variables for theming
-- Flexbox/Grid layout system
+- Mobile browsers
+- Progressive enhancement
+- Fallback behaviors
 
-### Known Issues & Solutions
-1. Scroll jumping on navigation
-   - Solution: scroll-margin-top adjustment
+## Maintenance Guide
 
-2. Animation performance on mobile
-   - Solution: Reduced particle count
-   - Hardware acceleration enabled
+### Adding New Content
+1. Modal content in `modals.html`
+2. Styling in `styles.css`
+3. Behavior in `scripts.js`
 
-3. Button visibility on different backgrounds
-   - Solution: Added contrasting glow effect
+### Theme Updates
+1. Add colors to `:root`
+2. Add `.lightmode` variations
+3. Test in both modes
 
-### Future Improvements
-1. Add loading animations
-2. Implement form submission
-3. Add more interactive elements
-4. Optimize image loading
-5. Add more project examples
+### Component Updates
+1. Match existing patterns
+2. Follow naming conventions
+3. Test responsive behavior
+4. Verify animations
 
-### Usage Instructions
-1. Clone repository
-2. Open index.html
-3. No build process required
-4. Images should be placed in /images directory
+## Known Issues & Solutions
 
-### Maintenance Notes
-- Update LinkedIn links as needed
-- Keep project examples current
-- Check for broken image links
-- Update member information as needed
+### Scroll Handling
+- Issue: Scroll jumps during navigation
+- Solution: Smooth scroll behavior and position management
+
+### Mobile Performance
+- Issue: Heavy animations on mobile
+- Solution: Reduced particle count, simplified animations
+
+### Touch Interactions
+- Issue: Gesture conflicts
+- Solution: Proper touch-action properties, prevented defaults
+
+## Future Enhancements
+1. Form submission functionality
+2. More interactive elements
+3. Enhanced accessibility
+4. Additional project examples
+5. Performance monitoring
+6. Analytics integration
+
+## Security Considerations
+1. Content Security Policy
+2. Input sanitization
+3. Cross-Origin Resource Sharing
+4. Secure storage practices

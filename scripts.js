@@ -72,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => { fixedHomeButton.style.display = 'none'; }, 500);
         }
     });
+
+    // Load modal HTML
+    fetch('modals.html')
+        .then(response => response.text())
+        .then(html => {
+            document.body.insertAdjacentHTML('beforeend', html);
+            setupModals();
+        });
 });
 
 function fadeInHomePage() {
@@ -218,5 +226,49 @@ function startCarouselAutoScroll() {
             currentIndex = Array.from(carouselInputs).indexOf(this);
             isReversing = currentIndex === carouselInputs.length - 1;
         });
+    });
+}
+
+function setupModals() {
+    const modals = {
+        'Our Mission': 'mission-modal',
+        'Our Activities': 'activities-modal',
+        'Our Club': 'club-modal'
+    };
+
+    // Add click handlers to titles
+    document.querySelectorAll('.card-hover__title').forEach(title => {
+        if (modals[title.textContent]) {
+            title.addEventListener('click', () => {
+                document.getElementById(modals[title.textContent]).style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+    });
+
+    // Add close handlers
+    document.querySelectorAll('.close-modal').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            closeBtn.closest('.modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
     });
 }
