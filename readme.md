@@ -91,7 +91,7 @@ git clone https://github.com/yourusername/eduvos-coding-club
 - Nogoni Simelane EDUV9143165
 
 ## 📸 Screenshots
-<p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/Aboutpage.PNG" width="400" alt="About Section"/> </p>
+<p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/aboutscreen.PNG" width="400" alt="About Section"/> </p>
 <p align="center"> <img src="images/homescreenlight.PNG" width="400" alt="Welcome Page Light"/> <img src="images/aboutpagelight.PNG" width="400" alt="About Section"/> </p>
 
 ## 🔮 Future Improvements
