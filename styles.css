@@ -1196,7 +1196,19 @@ footer.section-background {
     color: #9c6bc7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
+
+  .animated-heading {
+    font-size: 1.8em;
+    padding: 0 10px;
+  }
+
+  .glowing-btn {
+    font-size: 1.2em;
+    padding: 0.25em 0.75em;
+    letter-spacing: 0.3em;
+  }
+
     .footer-columns {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1429,12 +1441,14 @@ div.item img {
     margin: 0 auto;
 }
 
+
+
 .button-link:hover {
     text-decoration: none;
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 768px) {
     /* Theme and Home buttons */
     #theme-switch {
         top: 10px;
@@ -1677,7 +1691,7 @@ div.item img {
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 768px) {
     .header {
         padding: 0.8rem 1rem;
     }
