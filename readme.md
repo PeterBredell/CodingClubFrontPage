@@ -6,7 +6,7 @@
   <em>Building Community Through Code</em>
 </p>
 
-## ✨ Demo Preview
+## ✨ Demo Preview -- <a href="https://peterbredell.github.io/CodingClubFrontPage/" target="__blank">Live Demo Here</p>
 <div align="center">
     <img src="demo/demo-video.gif" alt="Website Demo" width="640"/>  
 </div>
@@ -91,7 +91,8 @@ git clone https://github.com/yourusername/eduvos-coding-club
 - Nogoni Simelane EDUV9143165
 
 ## 📸 Screenshots
-<p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/About.PNG" width="400" alt="About Section"/> </p>
+<p align="center"> <img src="images/homescreen.PNG" width="400" alt="Welcome Page"/> <img src="images/Aboutpage.PNG" width="400" alt="About Section"/> </p>
+<p align="center"> <img src="images/homescreenlight.PNG" width="400" alt="Welcome Page Light"/> <img src="images/aboutpagelight.PNG" width="400" alt="About Section"/> </p>
 
 ## 🔮 Future Improvements
 - <input disabled="" type="checkbox"> Add user authentication
