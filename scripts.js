@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Add homepage state class initially
+    document.body.classList.add('homepage-state');
+    
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -38,48 +41,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const returnHomeBtn = document.querySelector('.return-home-btn');
-    returnHomeBtn.addEventListener('click', function() {
-        returnHome();
-    });
-
-    const originalHomeButton = document.querySelector('.return-home-btn');
-    const fixedHomeButton = document.createElement('button');
-
-    fixedHomeButton.classList.add('fixed-home-btn', 'glowing-btn');
-    fixedHomeButton.innerHTML = '<span class="glowing-txt">F<span class="faulty-letter">I</span>ND</span>';
-    fixedHomeButton.style.display = 'none';
-    fixedHomeButton.onclick = returnHome;
-    document.body.appendChild(fixedHomeButton);
+    // Remove multiple event listeners and just keep one
+    const returnHomeBtn = document.querySelector('.return-home-btn .glowing-btn');
+    if (returnHomeBtn) {
+        returnHomeBtn.addEventListener('click', returnHome);
+    }
 
     window.addEventListener('scroll', function() {
         const aboutTop = aboutSection.offsetTop;
         if (window.scrollY < aboutTop) {
             window.scrollTo(0, aboutTop);
         }
-
-        if (window.scrollY > 50) {
-            originalHomeButton.classList.add('fade-out');
-            originalHomeButton.classList.remove('fade-in');
-            fixedHomeButton.classList.add('fade-in');
-            fixedHomeButton.classList.remove('fade-out');
-            fixedHomeButton.style.display = 'block';
-        } else {
-            originalHomeButton.classList.add('fade-in');
-            originalHomeButton.classList.remove('fade-out');
-            fixedHomeButton.classList.add('fade-out');
-            fixedHomeButton.classList.remove('fade-in');
-            setTimeout(() => { fixedHomeButton.style.display = 'none'; }, 500);
-        }
     });
 
-    // Load modal HTML
+    // Change modal loading to use fetch with error handling
     fetch('modals.html')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load modals');
+            return response.text();
+        })
         .then(html => {
             document.body.insertAdjacentHTML('beforeend', html);
             setupModals();
+        })
+        .catch(error => {
+            console.error('Error loading modals:', error);
         });
+
+    document.querySelector('.return-home-btn .glowing-btn').addEventListener('click', returnHome);
 });
 
 function fadeInHomePage() {
@@ -118,7 +107,13 @@ function enterWebsite() {
     const aboutSection = document.getElementById('about');
     const body = document.body;
     const themeSwitch = document.getElementById('theme-switch');
+    const header = document.querySelector('.header');
 
+    // Remove homepage state and show header
+    document.body.classList.remove('homepage-state');
+    setTimeout(() => {
+        header.classList.add('visible');
+    }, 800); // Add delay to match fade-out animation
 
     aboutSection.style.visibility = 'visible';
     aboutSection.style.display = 'block';
@@ -130,6 +125,10 @@ function enterWebsite() {
     
     homePage.classList.add('fade-out-up');
     body.classList.remove('no-scroll');
+
+    header.style.animation = 'none';
+    header.offsetHeight; // Trigger reflow
+    header.style.animation = null;
 
     setTimeout(() => {
         homePage.style.display = 'none';
@@ -144,10 +143,6 @@ function returnHome() {
     const homePage = document.querySelector('.homePage');
     const aboutSection = document.getElementById('about');
     const body = document.body;
-    const fixedHomeBtn = document.querySelector('.fixed-home-btn');
-    
-    // Only hide the home button, not the theme switch
-    fixedHomeBtn.style.display = 'none';
     
     homePage.style.display = 'flex';
     homePage.classList.remove('fade-out-up');
@@ -155,6 +150,9 @@ function returnHome() {
     
     aboutSection.style.display = 'none';
     body.classList.add('no-scroll');
+    
+    // Add homepage state class
+    document.body.classList.add('homepage-state');
     
     window.scrollTo({
         top: 0,
@@ -236,12 +234,15 @@ function setupModals() {
         'Our Club': 'club-modal'
     };
 
-    // Add click handlers to titles
     document.querySelectorAll('.card-hover__title').forEach(title => {
         if (modals[title.textContent]) {
             title.addEventListener('click', () => {
-                document.getElementById(modals[title.textContent]).style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                const modalId = modals[title.textContent];
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
             });
         }
     });
@@ -249,8 +250,11 @@ function setupModals() {
     // Add close handlers
     document.querySelectorAll('.close-modal').forEach(closeBtn => {
         closeBtn.addEventListener('click', () => {
-            closeBtn.closest('.modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
+            const modal = closeBtn.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     });
 

@@ -14,11 +14,14 @@
 ## 🎯 Project Overview
 An interactive website for the Eduvos Coding Club featuring:
 - 🌟 Dynamic animations and transitions
-- 🎨 Modern, responsive design
+- 🎨 Modern, responsive design with light/dark theme
 - 🔄 Interactive carousel for team members
 - ✨ Particle effects background
 - 🔗 LinkedIn integration
 - 📱 Mobile-friendly interface
+- 🎭 Smooth theme switching with persistence
+- 📦 Enhanced activity cards layout
+- 🎬 Animated header transitions
 
 ## 🛠️ Built With
 - HTML5
@@ -31,16 +34,25 @@ An interactive website for the Eduvos Coding Club featuring:
   - Custom particle system
   - Animated text effects
   - Smooth transitions
+  - Persistent theme selection
 
 - **Dynamic Navigation**
   - Smart scrolling behavior
   - Floating home button
   - Smooth section transitions
+  - Animated header entry/exit
+
+- **Enhanced Activities Section**
+  - Full-width activity cards
+  - Dynamic content layout
+  - Responsive image placement
+  - Improved readability
 
 - **Team Showcase**
   - Auto-scrolling carousel
   - LinkedIn profile integration
   - Professional member cards
+  - Touch-enabled navigation
 
 ## 🎨 Design Highlights
 - Custom glowing button effects
@@ -64,6 +76,15 @@ git clone https://github.com/yourusername/eduvos-coding-club
 - Built professional UI/UX components
 - Developed team showcase features
 
+## 💡 Latest Updates
+- Added smooth header animations
+- Implemented persistent theme switching
+- Enhanced activity cards layout
+- Improved mobile responsiveness
+- Added touch navigation for carousel
+- Fixed transition timing issues
+- Optimized content layout
+
 ## 👥 Bazinga Team Members
 - Peter Bredell EDUV8229212
 - Kgothatso Mamabolo  EDUV9052968
@@ -77,7 +98,7 @@ git clone https://github.com/yourusername/eduvos-coding-club
 - <input disabled="" type="checkbox"> Implement event registration
 - <input disabled="" type="checkbox"> Create member dashboard
 - <input disabled="" type="checkbox"> Add project submission system
-- <input disabled="" type="checkbox"> Optimize 1500 lines of css 
+- <input disabled="" type="checkbox"> Optimize 2000 lines of css 
 
 ## 🤝 Contributing
 Feel free to:
@@ -90,4 +111,4 @@ Feel free to:
 This project is licensed under the MIT License - see the LICENSE file for details
 
 ## 🏆 Hackathon Achievement
-Built in 5 days for the Coding Club hackathon with focus on creating the face of the coding club and learning as much as possible. 
+Built in 5 days for the Coding Club hackathon with focus on creating the face of the coding club and learning as much as possible.

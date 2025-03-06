@@ -15,23 +15,22 @@
     <link rel="stylesheet" href="styles.css">
 
 </head>
-<header id="header" class="header">      
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>  
-          <li><a href="#learnAndGrow" class="nav-link" data-section="intro">Learn and Grow</a></li>
-          <li><a href="#buildProjects" class="nav-link" data-section="events">Projects</a></li>
-          <li><a href="#activities" class="nav-link" data-section="resources">Activities</a></li>
-          <li><a href="#connect" class="nav-link" data-section="resources">Connect</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 <body class="no-scroll"> 
-    <button id="theme-switch">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>   
-    </button>
+    <header class="header">      
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>  
+                <li><a href="#learnAndGrow" class="nav-link" data-section="intro">Learn & Grow</a></li>
+                <li><a href="#buildProjects" class="nav-link" data-section="events">Projects</a></li>
+                <li><a href="#activities" class="nav-link" data-section="resources">Activities</a></li>
+                <li><a href="#connect" class="nav-link" data-section="resources">Connect</a></li>
+            </ul>
+        </nav>
+        <button id="theme-switch" class="theme-switch-header">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>   
+        </button>
+    </header>
     <div class="particle-container"></div> 
     <section class="homePage"> 
         <div class="home"> 
@@ -70,8 +69,8 @@
 
     <section id="about" class="about-section section"> 
         <div class="return-home-btn">
-            <button class="glowing-btn" onclick="returnHome()">
-            <span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>
+            <button class="glowing-btn">
+                <span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>
             </button>
         </div>
         <div class="text-container">
@@ -88,7 +87,7 @@
                 <div class="card-hover">
                     <div class="card-hover__content">
                         <h3 class="card-hover__title">Learn &amp; Grow</h3>
-                        <p class="card-hover__text">Weekly workshops and hands-on coding sessions focused on real-world applications</p>
+                        <p class="card-hover__text">Weekly workshops and hands-on coding sessions focused on real-world applications <br>‎<br></p>
                         <a href="#learnAndGrow" class="card-hover__link">
                             <span>Explore</span>
                             <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -101,12 +100,25 @@
                 <div class="card-hover">
                     <div class="card-hover__content">
                         <h3 class="card-hover__title">Build Projects</h3>
-                        <p class="card-hover__text">Collaborative projects and exciting hackathon opportunities to learn and build a CV </p>
+                        <p class="card-hover__text">Collaborative projects and exciting hackathon opportunities to learn and build a CV.</p>
                         <a href="#buildProjects" class="card-hover__link">
                             <span>Discover</span>
                             <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                             </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-hover">
+                    <div class="card-hover__content">
+                        <h3 class="card-hover__title">Activities</h3>
+                        <p class="card-hover__text">Get involved in the club and make life time memories that can teach you a thing or two <br>‎<br><br></p>
+                        <a href="#activities" class="card-hover__link">
+                            <span>See more</span>
+                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
                         </a>
                     </div>
                 </div>
@@ -120,19 +132,6 @@
                             <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                             </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card-hover">
-                    <div class="card-hover__content">
-                        <h3 class="card-hover__title">Activities</h3>
-                        <p class="card-hover__text">Get involved in the club and make life time memories that can teach you a thing or two</p>
-                        <a href="#Activties" class="card-hover__link">
-                            <span>See more</span>
-                            <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>        
                         </a>
                     </div>
                 </div>
@@ -244,15 +243,15 @@
                 </div>
             </div>
 
-            <div class="BuildProjectsSection" id="buildProjects">
+            <div class="ActivitiesSection" id="activities">
                 <div class="section-background">
-                <h1 class="heading">Activities</h1>
-                <p>Our club offers a platform for you to collaborate with other members and work on exciting projects.<br> We also host hackathons and coding competitions to challenge your skills</p>
-                <div class="learn-cards">
+                <h1 class="animated-heading">Activities</h1>
+                <p class="activities-text">Our club offers a platform for you to collaborate with other members and work on exciting projects.<br> We also host hackathons and coding competitions to challenge your skills</p>
+                <div class="Activity-cards">
                     <div class="card-hover">
                         <div class="card-hover__content">   
-                            <a href="https://github.com/Wian47/Password-Checker" target="_blank" class="card-hover__link text-center" >Created AI</a>
-                            <p class="card-hover__text">An assistant AI waiter. <br>‎</p>
+                            <h2 class="animated-heading">Why we focus on activities?</h2>
+                            <p class="card-hover__text">At the Coding Club, we’ve been sparking innovation and building skills that last. From hosting epic hackathons that churn out award-winning apps to running workshops that turn beginners into confident coders, we’re all about hands-on action. Our members have tackled real-world projects, collaborated with industry mentors, and even snagged internships through connections made right here. With a stash of free pizza-fueled coding nights and a trophy case of competition wins, we’re proud to be the hub for Eduvos’s tech enthusiasts. Ready to join the crew that’s coding the future? Dive in! <br>‎</p>
                             <div class="circle-image">
                                 <img src="images/robovid1.gif" alt="club image" class="circle-image"> 
                             </div>
@@ -260,7 +259,7 @@
                     </div>
                     <div class="card-hover">
                         <div class="card-hover__content">
-                            <a href="https://github.com/PeterBredell/WeatherWebsite" target="_blank" class="card-hover__link" >Some Activities</a>
+                            <h2 class="animated-heading">A list of our most popular activities</h2>
                             <p class="card-hover__text">
                                 <ul class="card-hover__text">
                                     <li>Movie nights related to technology. </li>
@@ -279,8 +278,8 @@
                     </div>
                     <div class="card-hover">
                         <div class="card-hover__content">
-                            <a href="https://github.com/Tcndiamond/MyOwntachiyomiJ2K" target="_blank"class="card-hover__link" >Your own robo-pet</a>
-                            <p class="card-hover__text">Mix between engineering and code.<br>‎</p>
+                            <h2 class="animated-heading">More on our activities and culture:</h2>
+                            <p class="card-hover__text">The Coding Club isn’t just a group—it’s a launchpad. We’ve turned late-night brainstorming into apps that impress recruiters, hosted coding showdowns that leave judges speechless, and led sessions where novices debug like pros. Our crew has teamed up with tech insiders, racked up wins in national coding contests, and created a vibe where creativity thrives (with a side of snacks). From mastering algorithms to forging lifelong connections, we’re the place where Eduvos students level up.<br>‎</p>
                             <div class="circle-image">
                                 <img src="images/robovid2.gif" alt="club image" class="circle-image"> 
                             </div>
@@ -288,7 +287,6 @@
                     </div>
                     
                 </div>
-                <p>JOIN US NOW!</p>
                 </div>
             </div>
 
