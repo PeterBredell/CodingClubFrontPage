@@ -862,7 +862,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
   .pulse-logo {
     width: 150px;
     height: 150px;
@@ -1044,7 +1044,7 @@ html {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
     .section-background .card-hover {
         max-width: 100%;
     }
@@ -1087,7 +1087,7 @@ footer {
   clear: both;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1920px) {
   .all-columns {
     width: 100%;
     display: block;
@@ -1434,7 +1434,7 @@ div.item img {
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1920px) {
     /* Theme and Home buttons */
     #theme-switch {
         top: 10px;
@@ -1677,7 +1677,7 @@ div.item img {
 }
 
 /* Mobile adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1920px) {
     .header {
         padding: 0.8rem 1rem;
     }
