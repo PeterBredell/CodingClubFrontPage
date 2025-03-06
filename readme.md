@@ -6,7 +6,7 @@
   <em>Building Community Through Code</em>
 </p>
 
-## ✨ Demo Preview
+## ✨ Demo Preview -- <a href="https://peterbredell.github.io/CodingClubFrontPage/" target="__blank">Live Demo Here</p>
 <div align="center">
     <img src="demo/demo-video.gif" alt="Website Demo" width="640"/>  
 </div>
