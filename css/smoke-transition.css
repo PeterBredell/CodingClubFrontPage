@@ -1,0 +1,189 @@
+/* Smoke Transition Effect */
+.smoke-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.smoke-transition.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.smoke-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.smoke-particle {
+    position: absolute;
+    background: rgba(156, 107, 199, 0.1);
+    border-radius: 50%;
+    filter: blur(20px);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.smoke-transition.active .smoke-particle {
+    animation: smokeEffect 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes smokeEffect {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Slide transitions */
+.slide-left-enter {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-left-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-left-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-left-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-right-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-right-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-right-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-right-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Combined smoke and slide effect */
+.smoke-slide-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background: linear-gradient(135deg, rgba(15, 5, 20, 0.9) 0%, rgba(26, 11, 46, 0.9) 50%, rgba(38, 16, 55, 0.9) 100%);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+.smoke-slide-transition.active {
+    clip-path: circle(150% at 50% 50%);
+}
+
+.smoke-slide-transition::before,
+.smoke-slide-transition::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(156, 107, 199, 0.2) 0%, rgba(15, 5, 20, 0) 70%);
+    opacity: 0;
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smoke-slide-transition.active::before,
+.smoke-slide-transition.active::after {
+    animation: smokeWave 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.smoke-slide-transition::after {
+    animation-delay: 0.5s;
+}
+
+@keyframes smokeWave {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* Lightmode adjustments */
+.lightmode .smoke-slide-transition {
+    background: linear-gradient(135deg, rgba(249, 241, 241, 0.9) 0%, rgba(255, 185, 152, 0.9) 50%, rgba(249, 241, 241, 0.9) 100%);
+}
+
+.lightmode .smoke-slide-transition::before,
+.lightmode .smoke-slide-transition::after {
+    background: radial-gradient(circle, rgba(156, 107, 199, 0.3) 0%, rgba(249, 241, 241, 0) 70%);
+}
+
+.lightmode .smoke-particle {
+    background: rgba(156, 107, 199, 0.2);
+}
+
+/* Reset blur filter after transitions */
+.homePage,
+#about,
+.section,
+body::after {
+    transition: filter 0.3s ease;
+}
+
+/* Force blur reset for all elements after transition */
+body.transition-complete .homePage,
+body.transition-complete #about,
+body.transition-complete .section {
+    filter: none !important;
+}

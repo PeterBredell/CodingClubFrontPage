@@ -2,72 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eduvos Coding Club - A community of passionate coders dedicated to learning and growing together">
+    <meta name="theme-color" content="#9c6bc7">
     <title>Eduvos Coding Club</title>
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/scripts.js" as="script">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/smoke-transition.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find</title>
-    <link rel="stylesheet" href="styles.css">
-
 </head>
-<body class="no-scroll"> 
-    <header class="header">      
-        <nav>
+<body class="no-scroll">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header" role="banner">
+        <nav aria-label="Main navigation">
             <ul class="nav-links">
-                <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>  
-                <li><a href="#learnAndGrow" class="nav-link" data-section="intro">Learn & Grow</a></li>
-                <li><a href="#buildProjects" class="nav-link" data-section="events">Projects</a></li>
-                <li><a href="#activities" class="nav-link" data-section="resources">Activities</a></li>
-                <li><a href="#connect" class="nav-link" data-section="resources">Connect</a></li>
+                <li><a href="#about" class="nav-link" data-section="about" aria-current="false">About Us</a></li>
+                <li><a href="#learnAndGrow" class="nav-link" data-section="intro" aria-current="false">Learn & Grow</a></li>
+                <li><a href="#buildProjects" class="nav-link" data-section="events" aria-current="false">Projects</a></li>
+                <li><a href="#activities" class="nav-link" data-section="resources" aria-current="false">Activities</a></li>
+                <li><a href="#connect" class="nav-link" data-section="resources" aria-current="false">Connect</a></li>
             </ul>
         </nav>
-        <button id="theme-switch" class="theme-switch-header">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>   
+        <button id="theme-switch" class="theme-switch-header" aria-label="Toggle dark/light theme">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" aria-hidden="true" focusable="false"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" aria-hidden="true" focusable="false"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
         </button>
     </header>
-    <div class="particle-container"></div> 
-    <section class="homePage"> 
-        <div class="home"> 
+    <div class="particle-container" aria-hidden="true"></div>
+    <section class="homePage" role="banner">
+        <div class="home">
             <div class="homeLogo">
                 <div class="pulse-logo">
-                  <img src="images/EduvosLogo.png" alt="eduvos logo" class="logo-image" id="eduvoslogo"> 
-                  <img src="images/CODING CLUB.png" alt="club logo" class="logo-image"> 
+                  <img src="assets/images/EduvosLogo.png" alt="Eduvos logo" class="logo-image" id="eduvoslogo" width="275" height="275" loading="eager">
+                  <img src="assets/images/CODING CLUB.png" alt="Coding Club logo" class="logo-image" id="clublogo" width="275" height="275" loading="eager">
                 </div>
             </div>
 
-            <h1 class="animated-heading">
+            <h1 class="animated-heading" id="main-content">
                 <span class="line">
-                    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                    <span>Welcome</span>
                 </span>
                 <span class="line">
-                    <span>t</span><span>o</span>
+                    <span>to</span>
                 </span>
                 <span class="line">
-                    <span>E</span><span>d</span><span>u</span><span>v</span><span>o</span><span>s</span>
+                    <span>Eduvos</span>
                 </span>
                 <span class="line">
-                    <span>C</span><span>o</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                    <span>Coding</span>
                 </span>
                 <span class="line">
-                    <span>C</span><span>l</span><span>u</span><span>b</span><span>!</span>
+                    <span>Club!</span>
                 </span>
             </h1>
 
             <div class="button">
-              <button class="glowing-btn" onclick="enterWebsite()">
+              <button class="glowing-btn" onclick="enterWebsite()" aria-label="Enter website">
               <span class="glowing-txt">CL<span class="faulty-letter">I</span>CK TO <span>E</span><span class="faulty-letter">N</span>TER</span>
               </button>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about-section section"> 
+    <section id="about" class="about-section section">
         <div class="return-home-btn">
             <button class="glowing-btn">
                 <span class="glowing-txt">H<span class="faulty-letter">O</span>ME</span>
@@ -78,12 +83,12 @@
                 <h2 class="section-title">About the club</h2>
                 <div class="title-underline"></div>
             </div>
-            
+
             <p class="about-text">
                 Welcome to the Eduvos Coding Club! We're a dynamic community of passionate coders dedicated to learning and growing together. Our club serves as a hub for students interested in software development, web technologies, and programming innovation.
             </p>
-            
-            <div class="about-cards"> 
+
+            <div class="about-cards">
                 <div class="card-hover">
                     <div class="card-hover__content">
                         <h3 class="card-hover__title">Learn &amp; Grow</h3>
@@ -92,7 +97,7 @@
                             <span>Explore</span>
                             <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>        
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -118,7 +123,7 @@
                             <span>See more</span>
                             <svg fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>        
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -173,9 +178,9 @@
                                 <h3 class="card-hover__title">Our Mission</h3>
                                 <p class="card-hover__text">Our mission is to provide a supportive community for students to learn, grow, and succeed in not just the tech industry but whatever workplace they might find themselves in. <br> Build community and strength together.</p>
                                 <div class="circle-image">
-                                    <img src="images/WorkshopImage.jpeg" alt="mission image" class="circle-image"> 
+                                    <img src="images/WorkshopImage.jpeg" alt="mission image" class="circle-image">
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="card-hover">
@@ -189,8 +194,9 @@
                                     <li>And so much more that will take you to the next level in your professional journey.</li>
                                 </ul>
                                 <div class="circle-image">
-                                    <img src="images/MicrosoftImage.jpeg" alt="activities image" class="circle-image"> 
+                                    <img src="images/MicrosoftImage.jpeg" alt="activities image" class="circle-image">
                                 </div>
+
                             </div>
                         </div>
                         <div class="card-hover">
@@ -198,8 +204,9 @@
                                 <h3 class="card-hover__title">Our Club</h3>
                                 <p class="card-hover__text">Join a vibrant community of passionate coders! Our club is your launchpad to cutting-edge tech skills, exciting projects, and invaluable industry connections. <br><br>‎</p>
                                 <div class="circle-image">
-                                    <img src="images/Network.jpeg" alt="club image" class="circle-image"> 
+                                    <img data-src="assets/images/Network.jpeg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Club networking image" class="circle-image" width="300" height="300" loading="lazy">
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -211,11 +218,11 @@
                 <p>Our club offers a platform for you to collaborate with other members and work on exciting projects.<br> We also host hackathons and coding competitions to challenge your skills</p>
                 <div class="learn-cards">
                     <div class="card-hover">
-                        <div class="card-hover__content">   
+                        <div class="card-hover__content">
                             <a href="https://github.com/Wian47/Password-Checker" target="_blank" class="card-hover__link text-center" >Password Strength Checker</a>
                             <p class="card-hover__text">A CLI program made to enfore good passwords.<br>‎</p>
                             <div class="circle-image">
-                                <img src="images/passCheck.png" alt="club image" class="circle-image"> 
+                                <img data-src="assets/images/passCheck.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Password checker project screenshot" class="circle-image" width="300" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -224,7 +231,7 @@
                             <a href="https://github.com/PeterBredell/WeatherWebsite" target="_blank" class="card-hover__link" >Weather Website</a>
                             <p class="card-hover__text">A website made in a workshop to add to your portfolio.</p>
                             <div class="circle-image">
-                                <img src="images/Weathersimulator.jpg" alt="club image" class="circle-image"> 
+                                <img data-src="assets/images/Weathersimulator.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Weather website project screenshot" class="circle-image" width="300" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -233,11 +240,11 @@
                             <a href="https://github.com/Tcndiamond/MyOwntachiyomiJ2K" target="_blank"class="card-hover__link" >My own tachi</a>
                             <p class="card-hover__text">A free and open source manga reader.<br>‎</p>
                             <div class="circle-image">
-                                <img src="images/Manga.jpg" alt="club image" class="circle-image"> 
+                                <img data-src="assets/images/Manga.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Manga reader project screenshot" class="circle-image" width="300" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <p>BUILD YOURS TODAY!</p>
                 </div>
@@ -249,11 +256,11 @@
                 <p class="activities-text">Our club offers a platform for you to collaborate with other members and work on exciting projects.<br> We also host hackathons and coding competitions to challenge your skills</p>
                 <div class="Activity-cards">
                     <div class="card-hover">
-                        <div class="card-hover__content">   
+                        <div class="card-hover__content">
                             <h2 class="animated-heading">Why we focus on activities?</h2>
                             <p class="card-hover__text">At the Coding Club, we’ve been sparking innovation and building skills that last. From hosting epic hackathons that churn out award-winning apps to running workshops that turn beginners into confident coders, we’re all about hands-on action. Our members have tackled real-world projects, collaborated with industry mentors, and even snagged internships through connections made right here. With a stash of free pizza-fueled coding nights and a trophy case of competition wins, we’re proud to be the hub for Eduvos’s tech enthusiasts. Ready to join the crew that’s coding the future? Dive in! <br>‎</p>
                             <div class="circle-image">
-                                <img src="images/robovid1.gif" alt="club image" class="circle-image"> 
+                                <img data-src="assets/images/robovid1.gif" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Robotics project animation" class="circle-image" width="300" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -269,10 +276,10 @@
                                     <li>Building a robotic system with coding integration. </li>
                                     <li>Team projects to build a simple game. </li>
                                 </ul>
-                                                             
+
                             </p>
                             <div class="circle-image">
-                                <img src="images/WorkshopImage.jpeg" alt="club image" class="circle-image"> 
+                                <img src="assets/images/WorkshopImage.jpeg" alt="club image" class="circle-image">
                             </div>
                         </div>
                     </div>
@@ -281,11 +288,11 @@
                             <h2 class="animated-heading">More on our activities and culture:</h2>
                             <p class="card-hover__text">The Coding Club isn’t just a group—it’s a launchpad. We’ve turned late-night brainstorming into apps that impress recruiters, hosted coding showdowns that leave judges speechless, and led sessions where novices debug like pros. Our crew has teamed up with tech insiders, racked up wins in national coding contests, and created a vibe where creativity thrives (with a side of snacks). From mastering algorithms to forging lifelong connections, we’re the place where Eduvos students level up.<br>‎</p>
                             <div class="circle-image">
-                                <img src="images/robovid2.gif" alt="club image" class="circle-image"> 
+                                <img data-src="assets/images/robovid2.gif" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3C/svg%3E" alt="Robotics project animation 2" class="circle-image" width="300" height="300" loading="lazy">
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 </div>
             </div>
@@ -303,7 +310,7 @@
                         <input type="radio" name="position" />
                         <main id="carousel">
                             <div class="item">
-                                <img src="images\Ayanda Dlamini - Secretary.jpeg" alt="Secretary image" class="circle-image">
+                                <img src="assets/images/Ayanda Dlamini - Secretary.jpeg" alt="Secretary image" class="circle-image">
                                 <h3 class="heading">Secretary</h3>
                                 <a href="https://www.linkedin.com/in/ayanda-dlamini-1081b9349/" target="_blank" class="button-link">
                                     <button class="custom-button">
@@ -318,7 +325,7 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <img src="images/Tanatswanashe Mthembu - Vice President.jpeg" alt="Vice President" class="circle-image">
+                                <img src="assets/images/Tanatswanashe Mthembu - Vice President.jpeg" alt="Vice President" class="circle-image">
                                 <h3 class="heading">Vice President</h3>
                                 <a href="https://www.linkedin.com/in/tanatswa-mthembu-8333072b0/" target="_blank" class="button-link">
                                     <button class="custom-button">
@@ -333,7 +340,7 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <img src="images/Vusi Kunene Matlou - President.jpeg" alt="President" class="circle-image">
+                                <img src="assets/images/Vusi Kunene Matlou - President.jpeg" alt="President" class="circle-image">
                                 <h3 class="heading">President</h3>
                                 <a href="https://www.linkedin.com/in/vusi-matlou" target="_blank" class="button-link">
                                     <button class="custom-button">
@@ -348,7 +355,7 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <img src="images\Thoriso Dibatana - Treasurer.jpeg" alt="Treasurer image" class="circle-image">
+                                <img src="assets/images/Thoriso Dibatana - Treasurer.jpeg" alt="Treasurer image" class="circle-image">
                                 <h3 class="heading">Treasurer</h3>
                                 <a href="https://www.linkedin.com/in/thoriso-dibatana" target="_blank" class="button-link">
                                     <button class="custom-button">
@@ -363,7 +370,7 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <img src="images\Vuyisile Shokane - Events Planner.jpeg" alt="Events Planner" class="circle-image">
+                                <img src="assets/images/Vuyisile Shokane - Events Planner.jpeg" alt="Events Planner" class="circle-image">
                                 <h3 class="heading">Events Planner</h3>
                                 <a href="https://www.linkedin.com/in/vuyisile-thato-shokane-21b101196/" target="_blank" class="button-link">
                                     <button class="custom-button">
@@ -384,8 +391,7 @@
 
         </div>
     </section>
-    <script src="scripts.js" defer></script>
-    <script src="lightmode.js" defer></script>
+    <!-- These script references are duplicated in the footer, removing them here -->
     <footer class="section-background">
         <div class="footer-container">
             <div class="footer-columns">
@@ -420,5 +426,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/smoke-transition.js"></script>
+    <script src="js/performance.js"></script>
+    <script src="js/card-interactions.js"></script>
+    <script src="js/lazy-load.js"></script>
+    <script src="js/lightmode.js"></script>
 </body>
 </html>
